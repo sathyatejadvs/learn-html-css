@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .site-name {
+        text-align: center;
+      }
+      .navbar-list {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+      }
+      .navbar-list-items a {
+        text-decoration: none;
+        color: black;
+      }
+      body {
+        background: azure;
+      }
+      .navbar-container {
+        background-color: white;
+      }
+      /* Media Queries to make the page responsive for different screen resolutions */
+      @media (max-width: 415px) {
+        .navbar-list {
+          display: block;
+        }
+      }
+      @media (min-width: 820px) {
+        .navbar-list {
+          background: darkcyan;
+        }
+        .navbar-list-items a {
+          color: white;
+        }
+      }
+    </style>
+    <script>
+      const navItems = [
+        {
+          label: "DOG",
+          href: "pages/dog.html",
+        },
+        {
+          label: "CAT",
+          href: "pages/cat.html",
+        },
+        {
+          label: "PETS",
+          href: "pages/pet.html",
+        },
+        {
+          label: "HORSE",
+          href: "",
+        },
+        {
+          label: "TACK",
+          href: "",
+        },
+        {
+          label: "CATTLE",
+          href: "",
+        },
+      ];
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="site-name">First Responsive Website</h1>
+    </header>
+    <nav class="navbar-container">
+      <ul class="navbar-list">
+        <script>
+          navItems.forEach((item, index) => {
+            document.write(`<li class="navbar-list-items" id="item-${index}">
+          <a href="${item.href}" target="_blank">${item.label}</a>
+        </li> `);
+          });
+        </script>
+        <!-- <li class="navbar-list-items">
+          <a href="pages/cat.html" target="_blank">Dog</a>
+        </li> -->
+        <!-- <li class="navbar-list-items">
+          <a href="pages/dog.html" target="_blank">CAT</a>
+        </li>
+        <li class="navbar-list-items">
+          <a href="pages/pet.html" target="_blank">PETS</a>
+        </li>
+        <li class="navbar-list-items"><a href="">HORSE</a></li>
+        <li class="navbar-list-items"><a href="">TACK</a></li>
+        <li class="navbar-list-items"><a href="">CATTLE</a></li>
+        <li class="navbar-list-items"><a href="">LIVESTOCK</a></li> -->
+      </ul>
+    </nav>
+    <main>
+      <div>
+        <h2>About US</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+        <img
+          src="images/most-popular-mural.jpg"
+          alt="Mural"
+          style="width: -webkit-fill-available"
+        />
+      </div>
+      <div>
+        <h2>Our Services</h2>
+        <ul>
+          <li>Service 1</li>
+          <li>Service 2</li>
+          <li>Service 3</li>
+        </ul>
+      </div>
+      <footer>
+        <div>
+          <h2>Contact US</h2>
+          <p>
+            Email:
+            <a href="mailto:contact@smarttechtrainings.com"
+              >contact@smarttechtrainings.com</a
+            >
+          </p>
+          <p>Phone: <a href="tel:9898998989">9898998989</a></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
